@@ -54,3 +54,33 @@ Inventa una lista di email autorizzate
 Chiedi all’utente la sua email, con un piccolo form.
 controlla che sia nella lista di chi può accedere,
 stampa un messaggio appropriato sull’esito del controllo.*/
+
+// 1. Prendo gli elementi dal DOM
+const userMail = document.getElementById('user-mail')
+const emailMessage = document.getElementById('email-message')
+const buttonForm = document.getElementById('button-form')
+
+// 2. Creo un array con le email autorizzate
+const authorised = ['tizio@gmail.com', 'caio@gmail.com', 'pinco@gmail.com', 'pallo@gmail.com']
+
+// 3. Creo un event listener
+buttonForm.addEventListener('click', function(){
+    
+    emailMessage.innerText = ''
+
+    // 4. Creo un ciclo che...
+    for ( let i = 0; i < authorised.length; i++){
+
+        // 5. ...controlli se la mail dell'utente corrisponda a quelle nella lista
+        if(userMail.value === authorised[i]){
+
+            // 6. Stampo il messaggio appropriato
+            emailMessage.innerText = 'Sei a posto, puoi entrare.'
+        }
+    }
+
+    // 6. Stampo il messaggio appropriato
+    if (emailMessage.innerText === ''){
+        emailMessage.innerText = 'Mi spiace, non sei in lista.'
+    }
+});

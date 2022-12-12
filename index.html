@@ -11,6 +11,7 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+    <!-- esercizio 1 -->
     <div class="container">
         <h3>Esercizio 1.</h3>
         <h2 class="text-center">Gioco dei dadi</h2>
@@ -36,10 +37,14 @@
         <h2 id="winner" class="text-center my-5"></h2>
     </div>
     <hr>
+    <!-- esercizio 2 -->
     <div class="container">
         <h3>Esercizio 2.</h3>
         <h2 class="text-center">Finto login</h2>
-        <input type="email" id="user-mail" placeholder="Inserisci la tua email" class="p-1 my-3 w-50 d-block mx-auto">
+        <div class="my-3 w-50 mx-auto d-flex align-items-center">
+            <input type="email" id="user-mail" value="pinco@gmail.com" placeholder="Inserisci la tua email" class="p-2 flex-grow-1">
+            <button id="button-form" class="btn btn-primary ms-2">Login</button> 
+        </div>
         <h2 id="email-message" class="text-center my-3"></h2>
     </div>
 </body>
