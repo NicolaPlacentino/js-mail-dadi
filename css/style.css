@@ -1,0 +1,15 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* general */
+
+p b{
+    font-size: 60px;
+}
+
+/* utils */
